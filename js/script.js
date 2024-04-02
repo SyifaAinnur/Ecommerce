@@ -47,11 +47,7 @@ $(function () {
       categories.getSingleCategory(decodeURIComponent(urlParam("category")));
     }
 
-    $("#apply-filter-price").click(function() {
-        var minPrice = parseFloat($("#min-price").val());
-        var maxPrice = parseFloat($("#max-price").val());
-        categories.filterByPrice(minPrice, maxPrice);
-    });
+    categories.ratingFilter(values)
   };
   // =========================================
   function loadScript(url, callback) {
