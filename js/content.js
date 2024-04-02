@@ -89,3 +89,31 @@ httpRequest.open(
   true
 );
 httpRequest.send();
+
+
+function searchProducts() {
+    let input = document.getElementById('searchInput').value.toLowerCase(); // Ambil nilai input pencarian dan ubah ke huruf kecil
+    let clothingItems = document.querySelectorAll('#containerClothing #box');
+    let accessoryItems = document.querySelectorAll('#containerAccessories #box');
+
+    // Iterasi semua item pakaian, sembunyikan yang tidak sesuai dengan pencarian
+    clothingItems.forEach(item => {
+        let itemName = item.querySelector('h3').textContent.toLowerCase(); // Ambil nama pakaian dan ubah ke huruf kecil
+        if (itemName.includes(input)) {
+            item.style.display = 'block'; // Tampilkan item jika cocok dengan pencarian
+        } else {
+            item.style.display = 'none'; // Sembunyikan item jika tidak cocok dengan pencarian
+        }
+    });
+
+    // Iterasi semua item aksesori, sembunyikan yang tidak sesuai dengan pencarian
+    accessoryItems.forEach(item => {
+        let itemName = item.querySelector('h3').textContent.toLowerCase(); // Ambil nama aksesori dan ubah ke huruf kecil
+        if (itemName.includes(input)) {
+            item.style.display = 'block'; // Tampilkan item jika cocok dengan pencarian
+        } else {
+            item.style.display = 'none'; // Sembunyikan item jika tidak cocok dengan pencarian
+        }
+    });
+}
+
