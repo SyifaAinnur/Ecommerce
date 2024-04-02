@@ -25,6 +25,7 @@ $(function () {
     if (urlParam("productid")) {
       products.getSingleProduct(urlParam("productid"));
     }
+
   };
   // =========================================
   const cartInfo = function () {
@@ -45,6 +46,12 @@ $(function () {
     if (decodeURIComponent(urlParam("category"))) {
       categories.getSingleCategory(decodeURIComponent(urlParam("category")));
     }
+
+    $("#apply-filter-price").click(function() {
+        var minPrice = parseFloat($("#min-price").val());
+        var maxPrice = parseFloat($("#max-price").val());
+        products.filterByPrice(minPrice, maxPrice);
+    });
   };
   // =========================================
   function loadScript(url, callback) {
