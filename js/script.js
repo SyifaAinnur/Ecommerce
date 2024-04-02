@@ -50,7 +50,7 @@ $(function () {
     $("#apply-filter-price").click(function() {
         var minPrice = parseFloat($("#min-price").val());
         var maxPrice = parseFloat($("#max-price").val());
-        products.filterByPrice(minPrice, maxPrice);
+        categories.filterByPrice(minPrice, maxPrice);
     });
   };
   // =========================================
