@@ -273,6 +273,8 @@ class Categories {
         fetch(this.apiUrl + "products/category/" + slug)
         .then((res) => res.json())
         .then(function (data) {
+            console.log(data);
+                console.log(value);
             // Filter produk berdasarkan rentang harga
             let filteredProducts = data.filter(product => product.price >= priceRange.min && product.price <= priceRange.max);
             
