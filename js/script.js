@@ -66,6 +66,10 @@ $(function () {
     $('#100on').on('input', function() {
         categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
+
+    $('#sort').on('change', function() {
+        categories.sortProducts($(this).val(), decodeURIComponent(urlParam("category")));
+    });
   };
   // =========================================
   function loadScript(url, callback) {
