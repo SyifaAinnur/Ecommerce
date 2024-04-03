@@ -45,10 +45,11 @@ $(function () {
   
     if (decodeURIComponent(urlParam("category"))) {
       categories.getSingleCategory(decodeURIComponent(urlParam("category")));
-      $('#range').on('input', function() {
+    }
+
+    $('#range').on('input', function() {
         categories.ratingFilter($(this).val());
     });
-    }
   };
   // =========================================
   function loadScript(url, callback) {
