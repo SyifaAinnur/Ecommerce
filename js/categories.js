@@ -131,7 +131,9 @@ class Categories {
         .then((res) => res.json())
         .then(function (data, index) {
             console.log(data)
+            console.log(value)
             $(data?.rating?.rate <= value).each(function (i, product) {
+                console.log(product)
                 // ====================================
                 // category name
                 $(".category-name").html(toTitleCase(product.category));
