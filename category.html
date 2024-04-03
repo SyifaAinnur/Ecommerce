@@ -1,87 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Website</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="navigation-placeholder"></div>
     <section class="container mb-4">
-      <div class="card text-bg-dark category-image">
-        <img
-          src="./img/catogery.png"
-          class="card-img category-img"
-          alt="elctonics image"
-        />
-        <div class="card-img-overlay">
-          <h5
-            class="category-title text-center fs-1 position-absolute start-50 top-50 translate-middle text-light category-name"
-          ></h5>
+        <div class="card text-bg-dark category-image">
+            <img src="./img/catogery.png" class="card-img category-img" alt="elctonics image" />
+            <div class="card-img-overlay">
+                <h5
+                    class="category-title text-center fs-1 position-absolute start-50 top-50 translate-middle text-light category-name">
+                </h5>
+            </div>
         </div>
-      </div>
-      <!-- ========================================= -->
-      <div class="fw-bold breadcrumb my-3"></div>
-      
+        <!-- ========================================= -->
+        <div class="fw-bold breadcrumb my-3"></div>
 
-      <section>
-        <title>Rating</title>
-        <input type="range" id="range" min="0" max="5" value="0" list="values" />
-        <datalist id="values">
-          <option value="0" label="0"></option>
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
-          <option value="4" label="4"></option>
-          <option value="5" label="5"></option>
-        </datalist>
-      </section>
 
-      <section>
-        <title>Price Range</title>
-        <ul>
-          <li>
-            <input id="0-25" type="checkbox" name="prange" value="0-25" />
-            <label for="0-25">$0 to $25</label>
-          </li>
-          <li>
-            <input id="25-50" type="checkbox" name="prange" value="25-50" />
-            <label for="25-50">$25 to $50</label>
-          </li>
-          <li>
-            <input id="50-100" type="checkbox" name="prange" value="50-100" />
-            <label for="50-100">$50 to $100</label>
-          </li>
-          <li>
-            <input id="100on" type="checkbox" name="prange" value="100+" />
-            <label for="100on">$100 onwards</label>
-          </li>
-        </ul>
-      </section>
-      
-      <section>
-        <title>Sort By</title>
-        <select id="sort">
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
-        </select>
-      </section>
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2 products"
-      ></div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item px-2">
+                    Price Range
+                </li>
+
+                <section>
+                    <title>Rating</title>
+                    <input type="range" id="range" min="0" max="5" value="0" list="values" />
+                    <datalist id="values">
+                        <option value="0" label="0"></option>
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
+                </section>
+
+                <li class="nav-item px-2">
+                    Price Range
+                </li>
+
+                <section>
+                    <title>Price Range</title>
+                    <ul>
+                        <li>
+                            <input id="0-25" type="checkbox" name="prange" value="0-25" />
+                            <label for="0-25">$0 to $25</label>
+                        </li>
+                        <li>
+                            <input id="25-50" type="checkbox" name="prange" value="25-50" />
+                            <label for="25-50">$25 to $50</label>
+                        </li>
+                        <li>
+                            <input id="50-100" type="checkbox" name="prange" value="50-100" />
+                            <label for="50-100">$50 to $100</label>
+                        </li>
+                        <li>
+                            <input id="100on" type="checkbox" name="prange" value="100+" />
+                            <label for="100on">$100 onwards</label>
+                        </li>
+                    </ul>
+                </section>
+                <li class="nav-item dropdown px-2">
+                    sort by
+                </li>
+                <section>
+                    <title>Sort By</title>
+                    <select id="sort">
+                        <option value="asc">Asc</option>
+                        <option value="desc">Desc</option>
+                    </select>
+                </section>
+            </ul>
+        </div>
+            <div>
+                <section>
+                    <title>Rating</title>
+                    <input type="range" id="range" min="0" max="5" value="0" list="values" />
+                    <datalist id="values">
+                        <option value="0" label="0"></option>
+                        <option value="1" label="1"></option>
+                        <option value="2" label="2"></option>
+                        <option value="3" label="3"></option>
+                        <option value="4" label="4"></option>
+                        <option value="5" label="5"></option>
+                    </datalist>
+                </section>
+
+                <section>
+                    <title>Price Range</title>
+                    <ul>
+                        <li>
+                            <input id="0-25" type="checkbox" name="prange" value="0-25" />
+                            <label for="0-25">$0 to $25</label>
+                        </li>
+                        <li>
+                            <input id="25-50" type="checkbox" name="prange" value="25-50" />
+                            <label for="25-50">$25 to $50</label>
+                        </li>
+                        <li>
+                            <input id="50-100" type="checkbox" name="prange" value="50-100" />
+                            <label for="50-100">$50 to $100</label>
+                        </li>
+                        <li>
+                            <input id="100on" type="checkbox" name="prange" value="100+" />
+                            <label for="100on">$100 onwards</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <title>Sort By</title>
+                    <select id="sort">
+                        <option value="asc">Asc</option>
+                        <option value="desc">Desc</option>
+                    </select>
+                </section>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-2 products"></div>
     </section>
     <div id="footer-placeholder"></div>
 
@@ -89,5 +136,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
     <script src="./js/script.js"></script>
-  </body>
+</body>
+
 </html>
