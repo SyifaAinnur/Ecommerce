@@ -125,63 +125,6 @@ class Categories {
             });
     }
 
-
-    // ratingFilter(value, slug) {
-    //     fetch(this.apiUrl + "products/category/" + slug)
-    //     .then((res) => res.json())
-    //     .then(function (data, index) {
-    //         console.log(data)
-    //         console.log(value)
-    //         $(data?.rating?.rate <= value).each(function (i, product) {
-    //             console.log(product)
-    //             // ====================================
-    //             // category name
-    //             $(".category-name").html(toTitleCase(product.category));
-    //             // ====================================
-    //             // home link and name of category page
-    //             $(".breadcrumb").html(
-    //                 '<a class="link-danger link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Home</a> <span> >></span>' +
-    //                 toTitleCase(product.category)
-    //             );
-    //             // ====================================
-    //             // products card
-    //             $(".products").append(
-    //                 '<div  class="col mx-auto cards products__' +
-    //                 product.category +
-    //                 '"><div class="card products__card"><a class="text-decoration-none position-relative h-50 w-100" href="../product.html?productid=' +
-    //                 encodeURIComponent(product.id) +
-    //                 '">' +
-    //                 ' <img class="card-img-top position-absolute top-50 start-50 translate-middle products__img " src = " ' +
-    //                 product.image +
-    //                 '" alt =' +
-    //                 product.title +
-    //                 ' > </img ></a><div class="d-flex justify-content-center align-items-center" ><a class="text-decoration-none" href="../product.html?productid=' +
-    //                 encodeURIComponent(product.id) +
-    //                 '">' +
-    //                 '<h5 class="card-title text-center fs-5 fw-bold text-dark mt-md-2 mt-0" > ' +
-    //                 product.title +
-    //                 "</h5 >" +
-    //                 "<p class=' card-text text-secondary text-center mb-0 mb-md-2' >" +
-    //                 product.category +
-    //                 "</p >" +
-    //                 "<p class=' card-text text-danger text-center ' > <span>$</span> " +
-    //                 product.price.toFixed(2) +
-    //                 '</p></div> </a><div class=" d-flex justify-content-center align-items-center my-0 my-md-3 text-center products__buttons"><button class="btn btn-success mx-2 my-md-1 my-0 product__button cart-button" onclick="addToCart(' +
-    //                 product.id +
-    //                 ', this)">' +
-    //                 " Add To Cart </button>" +
-    //                 '<button class="btn btn-primary my-md-1 my-0 mx-2 product__button wish-button " onclick="addToWish(' +
-    //                 product.id +
-    //                 ',this)">' +
-    //                 " Add To Wishlist " +
-    //                 '</button></div><div class="card-footer position-absolute bottom-0  w-100 text-center">' +
-    //                 '<small class="text-body-secondary">Last updated 3 days ago</small></div></div></div>'
-    //             );
-
-    //         });
-
-    //     })}
-
     ratingFilter(value, slug) {
         fetch(this.apiUrl + "products/category/" + slug)
             .then((res) => res.json())
@@ -245,5 +188,110 @@ class Categories {
             });
     }
 
+    // priceFilter(value, slug) {
+    //     fetch(this.apiUrl + "products/category/" + slug)
+    //         .then((res) => res.json())
+    //         .then(function (data) {
+    //             console.log(data);
+    //             console.log(value);
+    //             let filteredProducts = data.filter(product => product.price <= value);
+
+    //             $(".products").empty();
+
+    //             if (filteredProducts.length === 0) {
+    //                 $(".products").append("<p>No products found.</p>");
+    //             } else {
+    //                 filteredProducts.forEach(function (product) {
+    //                     // ====================================
+    //                     // category name
+    //                     $(".category-name").html(toTitleCase(product.category));
+    //                     // ====================================
+    //                     // home link and name of category page
+    //                     $(".breadcrumb").html(
+    //                         '<a class="link-danger link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Home</a> <span> >></span>' +
+    //                         toTitleCase(product.category)
+    //                     );
+    //                     // ====================================
+    //                     // products card
+    //                     $(".products").append(
+    //                         '<div  class="col mx-auto cards products__' +
+    //                         product.category +
+    //                         '"><div class="card products__card"><a class="text-decoration-none position-relative h-50 w-100" href="../product.html?productid=' +
+    //                         encodeURIComponent(product.id) +
+    //                         '">' +
+    //                         ' <img class="card-img-top position-absolute top-50 start-50 translate-middle products__img " src = " ' +
+    //                         product.image +
+    //                         '" alt =' +
+    //                         product.title +
+    //                         ' > </img ></a><div class="d-flex justify-content-center align-items-center" ><a class="text-decoration-none" href="../product.html?productid=' +
+    //                         encodeURIComponent(product.id) +
+    //                         '">' +
+    //                         '<h5 class="card-title text-center fs-5 fw-bold text-dark mt-md-2 mt-0" > ' +
+    //                         product.title +
+    //                         "</h5 >" +
+    //                         "<p class=' card-text text-secondary text-center mb-0 mb-md-2' >" +
+    //                         product.category +
+    //                         "</p >" +
+    //                         "<p class=' card-text text-danger text-center ' > <span>$</span> " +
+    //                         product.price.toFixed(2) +
+    //                         '</p></div> </a><div class=" d-flex justify-content-center align-items-center my-0 my-md-3 text-center products__buttons"><button class="btn btn-success mx-2 my-md-1 my-0 product__button cart-button" onclick="addToCart(' +
+    //                         product.id +
+    //                         ', this)">' +
+    //                         " Add To Cart </button>" +
+    //                         '<button class="btn btn-primary my-md-1 my-0 mx-2 product__button wish-button " onclick="addToWish(' +
+    //                         product.id +
+    //                         ',this)">' +
+    //                         " Add To Wishlist " +
+    //                         '</button></div><div class="card-footer position-absolute bottom-0  w-100 text-center">' +
+    //                         '<small class="text-body-secondary">Last updated 3 days ago</small></div></div></div>'
+    //                     );
+    //                 });
+    //             }
+    //         })
+    // }
+
+    priceFilter(value, slug) {
+        let priceRange;
+        switch (value) {
+            case "0-25":
+                priceRange = { min: 0, max: 25 };
+                break;
+            case "25-50":
+                priceRange = { min: 25, max: 50 };
+                break;
+            case "50-100":
+                priceRange = { min: 50, max: 100 };
+                break;
+            case "100+":
+                priceRange = { min: 100, max: Infinity };
+                break;
+            default:
+                // Jika tidak ada nilai yang cocok, keluar dari fungsi
+                return;
+        }
+    
+        fetch(this.apiUrl + "products/category/" + slug)
+        .then((res) => res.json())
+        .then(function (data) {
+            // Filter produk berdasarkan rentang harga
+            let filteredProducts = data.filter(product => product.price >= priceRange.min && product.price <= priceRange.max);
+            
+            // Bersihkan konten produk sebelum menambahkan produk yang difilter
+            $(".products").empty();
+            
+            // Periksa apakah ada produk yang tersaring
+            if (filteredProducts.length === 0) {
+                // Jika tidak ada produk yang tersaring, tambahkan teks atau pesan
+                $(".products").append("<p>No products found.</p>");
+            } else {
+                // Jika ada produk yang tersaring, tambahkan produk ke halaman
+                filteredProducts.forEach(function(product) {
+                    // Tambahkan kode untuk menambahkan produk ke halaman di sini
+                    console.log(product);
+                });
+            }
+        });
+    }
+    
 
 }

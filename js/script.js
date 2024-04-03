@@ -50,6 +50,10 @@ $(function () {
     $('#range').on('input', function() {
         categories.ratingFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
+
+    $('#price').on('input', function() {
+        categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
+    });
   };
   // =========================================
   function loadScript(url, callback) {
