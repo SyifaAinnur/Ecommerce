@@ -130,7 +130,8 @@ class Categories {
         fetch(this.apiUrl + "products/category/" + slug)
         .then((res) => res.json())
         .then(function (data, index) {
-            $(data.rating.rate <= value).each(function (i, product) {
+            console.log(data)
+            $(data?.rating?.rate <= value).each(function (i, product) {
                 // ====================================
                 // category name
                 $(".category-name").html(toTitleCase(product.category));
