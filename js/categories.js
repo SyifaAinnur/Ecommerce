@@ -126,7 +126,7 @@ class Categories {
     }
 
 
-    ratingFilter(value) {
+    ratingFilter(value, slug) {
         fetch(this.apiUrl + "products/category/" + slug)
         .then((res) => res.json())
         .then(function (data, index) {
