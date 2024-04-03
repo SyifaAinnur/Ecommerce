@@ -263,10 +263,10 @@ class Categories {
                 priceRange = { min: 50, max: 100 };
                 break;
             case "100+":
-                priceRange = { min: 100, max: Infinity };
+                priceRange = { min: 100, max: 1000000 };
                 break;
             default:
-                // Jika tidak ada nilai yang cocok, keluar dari fungsi
+                priceRange = { min: 0, max: 1000000 };
                 return;
         }
     
