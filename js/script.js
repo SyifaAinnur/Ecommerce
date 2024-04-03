@@ -51,7 +51,19 @@ $(function () {
         categories.ratingFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
 
-    $('#price').on('input', function() {
+    $('#0-25').on('input', function() {
+        categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
+    });
+
+    $('#25-50').on('input', function() {
+        categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
+    } );
+
+    $('#50-100').on('input', function() {
+        categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
+    });
+
+    $('#100-200').on('input', function() {
         categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
   };
