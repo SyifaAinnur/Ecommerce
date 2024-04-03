@@ -63,7 +63,7 @@ $(function () {
         categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
 
-    $('#100-200').on('input', function() {
+    $('#100on').on('input', function() {
         categories.priceFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
   };
