@@ -48,7 +48,7 @@ $(function () {
     }
 
     $('#range').on('input', function() {
-        categories.ratingFilter($(this).val());
+        categories.ratingFilter(this.value, decodeURIComponent(urlParam("category")));
     });
   };
   // =========================================
