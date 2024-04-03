@@ -68,7 +68,7 @@ $(function () {
     });
 
     $('#sort').on('change', function() {
-        categories.sortProducts($(this).val(), decodeURIComponent(urlParam("category")));
+        categories.sortFilter($(this).val(), decodeURIComponent(urlParam("category")));
     });
   };
   // =========================================
